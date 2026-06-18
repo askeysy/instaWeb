@@ -1,6 +1,8 @@
 from fastapi import APIRouter
 from fastapi.responses import RedirectResponse
-from .service import build_auth_url
+from starlette.responses import JSONResponse
+
+from .service import build_auth_url, exchange_code_for_tokens
 
 router = APIRouter()
 
